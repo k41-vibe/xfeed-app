@@ -1721,7 +1721,7 @@ struct InlineVideoPlayer: UIViewRepresentable {
     }
 
     final class PlayerView: UIView {
-        private var player: AVQueuePlayer?
+        private var player: AVPlayer?
         private var looper: AVPlayerLooper?
 
         override static var layerClass: AnyClass { AVPlayerLayer.self }
