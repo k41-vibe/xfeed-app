@@ -1,0 +1,173 @@
+{
+  "thread-1": [
+    {
+      "id": "1001",
+      "userName": "テック速報",
+      "screenName": "techflash",
+      "text": "新しいM4チップのベンチマークが出た。シングルコアで前世代比38%向上。電力効率も改善している。",
+      "imageUrl": null,
+      "likes": 1240,
+      "reposts": 382,
+      "replies": 94,
+      "createdAt": "2026-09-20T09:12:00Z"
+    },
+    {
+      "id": "1002",
+      "userName": "山田 健",
+      "screenName": "ken_yamada",
+      "text": "Swift 6 の strict concurrency、最初は厳しすぎると思ったけど、一度慣れるとデータ競合のバグが激減する。@MainActor を適切に付けるだけでかなり変わる。",
+      "imageUrl": null,
+      "likes": 486,
+      "reposts": 121,
+      "replies": 33,
+      "createdAt": "2026-09-20T08:45:00Z"
+    },
+    {
+      "id": "1003",
+      "userName": "Rust Weekly",
+      "screenName": "rustweekly",
+      "text": "Rust 1.90 released. Improved incremental compilation, better async diagnostics, and a new lint for unnecessary allocations.",
+      "imageUrl": null,
+      "likes": 892,
+      "reposts": 267,
+      "replies": 41,
+      "createdAt": "2026-09-20T07:30:00Z"
+    },
+    {
+      "id": "1004",
+      "userName": "インフラ猫",
+      "screenName": "infra_neko",
+      "text": "本番環境でメモリリークを見つけた時の達成感は異常。3日悩んでたのがクロージャの循環参照ひとつだった。",
+      "imageUrl": null,
+      "likes": 2103,
+      "reposts": 654,
+      "replies": 128,
+      "createdAt": "2026-09-19T22:10:00Z"
+    },
+    {
+      "id": "1005",
+      "userName": "Kernel Notes",
+      "screenName": "kernelnotes",
+      "text": "Linux 6.18 のリリースノートを読んでいる。スケジューラの変更が地味に効いていて、WSL2上のビルド時間が体感で変わった。",
+      "imageUrl": null,
+      "likes": 567,
+      "reposts": 143,
+      "replies": 27,
+      "createdAt": "2026-09-19T18:05:00Z"
+    }
+  ],
+  "thread-2": [
+    {
+      "id": "2001",
+      "userName": "佐藤 みなみ",
+      "screenName": "minami_design",
+      "text": "ダークテーマの設計で一番大事なのは、純黒を使わないこと。背景に #151515 程度のグレーを置くと、カードの #1E1E1E が自然に浮く。",
+      "imageUrl": null,
+      "likes": 3421,
+      "reposts": 892,
+      "replies": 156,
+      "createdAt": "2026-09-20T10:20:00Z"
+    },
+    {
+      "id": "2002",
+      "userName": "Design Systems",
+      "screenName": "ds_weekly",
+      "text": "Contrast ratios matter more than hue. An orange accent (#FF6B35) on a near-black ground reads clearly, but the same orange on white fails WCAG AA.",
+      "imageUrl": null,
+      "likes": 1188,
+      "reposts": 401,
+      "replies": 62,
+      "createdAt": "2026-09-20T06:15:00Z"
+    },
+    {
+      "id": "2003",
+      "userName": "中村 ゆい",
+      "screenName": "yui_n",
+      "text": "余白の設計、8pxグリッドに揃えるだけで全然違う。カード間8px、カード内16px、外側16px。これだけで整って見える。",
+      "imageUrl": null,
+      "likes": 876,
+      "reposts": 234,
+      "replies": 45,
+      "createdAt": "2026-09-19T20:40:00Z"
+    },
+    {
+      "id": "2004",
+      "userName": "Typography Daily",
+      "screenName": "typedaily",
+      "text": "SF Symbols は 25x25 でも十分読める。アイコンを大きくしすぎると本文が負ける。バランスが全て。",
+      "imageUrl": null,
+      "likes": 654,
+      "reposts": 178,
+      "replies": 29,
+      "createdAt": "2026-09-19T15:22:00Z"
+    },
+    {
+      "id": "2005",
+      "userName": "鈴木 大輔",
+      "screenName": "daisuke_s",
+      "text": "モバイルのリストで左右パディング0にして、カード側にパディングを持たせると、スクロール時の端の見え方がきれいになる。",
+      "imageUrl": null,
+      "likes": 432,
+      "reposts": 98,
+      "replies": 18,
+      "createdAt": "2026-09-19T11:08:00Z"
+    }
+  ],
+  "thread-3": [
+    {
+      "id": "3001",
+      "userName": "音楽理論bot",
+      "screenName": "ongaku_riron",
+      "text": "ドリアンスケールは暗いけど希望がある。ノート数は同じなのに、始まる位置が違うだけで全く別の感情になるのが面白い。",
+      "imageUrl": null,
+      "likes": 1876,
+      "reposts": 543,
+      "replies": 87,
+      "createdAt": "2026-09-20T11:00:00Z"
+    },
+    {
+      "id": "3002",
+      "userName": "田中 あかり",
+      "screenName": "akari_ongaku",
+      "text": "DTMを始めて1年、やっとミックスの意味が分かってきた。音量を揃えるんじゃなくて、周波数帯を住み分けさせる作業なんだよね。",
+      "imageUrl": null,
+      "likes": 923,
+      "reposts": 267,
+      "replies": 54,
+      "createdAt": "2026-09-20T05:48:00Z"
+    },
+    {
+      "id": "3003",
+      "userName": "Ambient Japan",
+      "screenName": "ambient_jp",
+      "text": "環境音とアンビエントの境界は曖昧で、そこがいい。フィールドレコーディングにリバーブをかけた瞬間、もう音楽になっている。",
+      "imageUrl": null,
+      "likes": 1345,
+      "reposts": 412,
+      "replies": 73,
+      "createdAt": "2026-09-19T23:30:00Z"
+    },
+    {
+      "id": "3004",
+      "userName": "機材速報",
+      "screenName": "kizai_flash",
+      "text": "新しいオーディオインターフェースの発表。レイテンシが前モデル比で40%削減、USB-C給電対応。価格は据え置き。",
+      "imageUrl": null,
+      "likes": 712,
+      "reposts": 189,
+      "replies": 36,
+      "createdAt": "2026-09-19T16:55:00Z"
+    },
+    {
+      "id": "3005",
+      "userName": "作曲メモ",
+      "screenName": "sakkyoku_memo",
+      "text": "コード進行で行き詰まったら、まずメロディを1オクターブ下げてみる。それだけで配置が見えることがある。",
+      "imageUrl": null,
+      "likes": 1567,
+      "reposts": 498,
+      "replies": 91,
+      "createdAt": "2026-09-19T09:14:00Z"
+    }
+  ]
+}

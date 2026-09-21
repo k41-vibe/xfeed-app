@@ -1,0 +1,66 @@
+name: Build IPA
+
+# リポジトリ直下がこのディレクトリ（project.yml がある階層）である前提。
+# xfeed-app/ をサブディレクトリとして置く場合は working-directory を変える。
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Show Swift version
+        run: swift --version
+
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      - name: Generate Xcode project
+        run: xcodegen generate
+
+      # --- 型チェック（高速）。ここで落ちればコードに誤りがある ---
+      - name: Compile check (simulator)
+        run: |
+          xcodebuild \
+            -project xfeed-app.xcodeproj \
+            -scheme xfeed-app \
+            -sdk iphonesimulator \
+            -destination 'generic/platform=iOS Simulator' \
+            -configuration Debug \
+            CODE_SIGNING_ALLOWED=NO \
+            build
+
+      # --- 実機向けにビルドして IPA に固める ---
+      - name: Build for device (unsigned)
+        run: |
+          xcodebuild \
+            -project xfeed-app.xcodeproj \
+            -scheme xfeed-app \
+            -sdk iphoneos \
+            -configuration Release \
+            -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            build
+
+      - name: Package IPA
+        run: |
+          mkdir -p Payload
+          cp -R build/Build/Products/Release-iphoneos/xfeed-app.app Payload/
+          zip -qry xfeed-app.ipa Payload
+          ls -lh xfeed-app.ipa
+
+      - name: Upload IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: xfeed-app-ipa
+          path: xfeed-app.ipa
+          retention-days: 30

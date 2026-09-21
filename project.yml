@@ -1,0 +1,36 @@
+name: xfeed-app
+
+options:
+  bundleIdPrefix: com.xfeed
+  deploymentTarget:
+    iOS: "18.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    SWIFT_STRICT_CONCURRENCY: complete
+    TARGETED_DEVICE_FAMILY: "1,2"
+    CODE_SIGN_STYLE: Automatic
+
+targets:
+  xfeed-app:
+    type: application
+    platform: iOS
+    sources:
+      # Swift ソース（Info.plist はビルド設定で指定するので除外）
+      - path: Sources/xfeed-app
+        excludes:
+          - Info.plist
+          - Resources
+      # バンドルするリソース
+      - path: Sources/xfeed-app/Resources
+        buildPhase: resources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.xfeed.app
+        PRODUCT_NAME: xfeed-app
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        GENERATE_INFOPLIST_FILE: NO
+        INFOPLIST_FILE: Sources/xfeed-app/Info.plist
